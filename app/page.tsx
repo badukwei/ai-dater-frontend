@@ -10,7 +10,7 @@ export default function Home() {
   const [currentScreen, setCurrentScreen] = useState<"landing" | "upload" | "reply">("landing")
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-pink-50 to-purple-100">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-pink-50 to-purple-100 md:p-8">
       {currentScreen === "landing" && <LandingModal onGetStarted={() => setCurrentScreen("upload")} />}
       {currentScreen === "upload" && (
         <UploadScreen onBack={() => setCurrentScreen("landing")} onSubmit={() => setCurrentScreen("reply")} />
